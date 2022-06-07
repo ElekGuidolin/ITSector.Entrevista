@@ -1,0 +1,33 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Alteração de Case de Caracteres";
+}
+
+<h1>Inversão de Caracteres.</h1>
+
+<hr />
+
+<div class="text-center">
+    <h1 class="display-4">Teste de entrevista ITSector</h1>
+    <p>Cada teste está em um link do menu acima.</p>
+</div>
+
+<hr />
+
+  <div class="col-md-12">
+    <h3>Alterar Case das Letras</h3>
+  </div>
+  <div class="col-md-6">
+    <form method="post" asp-controller="AlteraCaseLetras" asp-action="Alterar">
+      <div class="form-group">
+        <label for="original">Frase:</label>
+        <input id="original" name="original" type="text" class="form-control" placeholder="Original..." />
+      </div>
+
+      <div class="form-group">
+        <label for="alterado">Case Alterado:</label>
+        <input id="alterado" name="alterado" type="text" class="form-control" placeholder="Texto Alterado:" disabled="disabled" value="@Model" />
+      </div>
+      <button type="submit" class="btn btn-primary">Alterar</button>
+    </form>
+  </div>

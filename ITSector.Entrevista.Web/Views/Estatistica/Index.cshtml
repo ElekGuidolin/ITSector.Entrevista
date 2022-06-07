@@ -1,0 +1,34 @@
+﻿@model float
+
+@{
+    ViewData["Title"] = "Estattística";
+}
+
+<h1>Probabilidade de Golos.</h1>
+
+<hr />
+
+<div class="text-center">
+    <h1 class="display-4">Teste de entrevista ITSector</h1>
+    <p>Cada teste está em um link do menu acima.</p>
+</div>
+
+<hr />
+
+  <div class="col-md-12">
+    <h3>Calcular</h3>
+  </div>
+  <div class="col-md-6">
+    <form method="post" asp-controller="Estatistica" asp-action="Index">
+      <div class="form-group">
+        <label for="chutes">Chutes:</label>
+        <input id="chutes" name="chutes" type="text" class="form-control" placeholder="Chutes..." />
+      </div>
+
+      <div class="form-group">
+        <label for="possibilidade">Possibilidade de golos no próximo chute:</label>
+        <input id="possibilidade" name="possibilidade" type="text" class="form-control" placeholder="Possibilidade de Golo:" disabled="disabled" value="@Model.ToString()%" />
+      </div>
+      <button type="submit" class="btn btn-primary" id="button" name="button" formmethod="post">Calcular</button>
+    </form>
+  </div>
